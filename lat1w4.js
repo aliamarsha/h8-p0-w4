@@ -1,5 +1,22 @@
+//Angka Prima
+
 function angkaPrima(angka) {
-  // you can only write your code here!
+  if (angka === 1){
+    return false; 
+  }
+  else if (angka === 2){
+    return true; 
+  }
+  else if (angka > 1){
+    for (var i=2; i < angka; i++){
+      if (angka % i === 0){
+        return false;
+      }
+    else {
+      return true
+    }
+    }
+  }
 }
 
 // TEST CASES
