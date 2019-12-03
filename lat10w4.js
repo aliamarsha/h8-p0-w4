@@ -2,6 +2,9 @@
 
 function changeMe(arr) {
     var obj = {}; 
+    if (arr.length == 0){
+        console.log(" ");
+    }
     for (var i = 0; i < arr.length; i++){
         obj.firstName = arr[i][0],
         obj.lastName = arr[i][1], 
