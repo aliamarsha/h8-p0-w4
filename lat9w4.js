@@ -11,12 +11,12 @@ function checkAB(num) {
             return true; 
           }
         } 
-        else {
-          return false;
+        
         }
     }
+    return false;
   }
-  }
+
 
 // TEST CASES
 console.log(checkAB('lane borrowed')); // true

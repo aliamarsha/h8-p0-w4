@@ -7,7 +7,8 @@ function changeMe(arr) {
         obj.lastName = arr[i][1], 
         obj.gender = arr[i][2],
         obj.age = 2019 - arr[i][3] || "Invalid Birth Year"
-        console.log(obj)
+        console.log(`${i+1}. ${arr[i][0]}. ${arr[i][1]}`);
+        console.log(obj);
     }
     
   }
