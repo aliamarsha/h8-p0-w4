@@ -1,5 +1,6 @@
 // Ubah Huruf
 
+/* CARA LAMA
 function ubahHuruf(kata) {
     var newKata = kata.split([]); 
     console.log(newKata);
@@ -86,10 +87,30 @@ function ubahHuruf(kata) {
     }
     return newKata.join("");
   }
-  
+  */ 
+
+
+  // CARA CEPAT
+  function ubahHuruf(kata) {
+     var result = "";
+     var alphabet = "abcdefghijklmnopqrstuvwxyz";
+     
+      for (var i = 0; i < kata.length; i++){
+            for (var j = 0; j < alphabet.length; j++){
+                  if (kata[i] == alphabet[j] && alphabet[j] == "z"){
+                        result += alphabet[0];
+                  } else if (kata[i] == alphabet[j]){
+                       result += alphabet[j + 1];
+                 }
+                 
+            }
+      }
+      return result;
+    }
+
   // TEST CASES
   console.log(ubahHuruf('wow')); // xpx
-  console.log(ubahHuruf('developer')); // efwfmpqfs
+  console.log(ubahHuruf('developerz')); // efwfmpqfs
   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
   console.log(ubahHuruf('keren')); // lfsfo
   console.log(ubahHuruf('semangat')); // tfnbohbu
