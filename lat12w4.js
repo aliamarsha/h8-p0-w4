@@ -9,21 +9,13 @@ function countProfit(shoppers) {
     for (var i =0; i < listBarang.length; i++){
         var profit = 0;
         var pembeli = []; 
-        //var leftover = 0;
         for (var j =0; j < shoppers.length; j++){
             if (listBarang[i][0] == shoppers[j]["product"] && shoppers[j]["amount"] <= listBarang[i][2]){
                 listBarang[i][2] -= shoppers[j]["amount"];
                 profit += listBarang[i][1] * shoppers[j]["amount"];
                 pembeli.push(shoppers[j]["name"]);
                 
-                //console.log(pembeli);
-                //console.log(profit);
             }
-          /*  if (){
-                shoppers = [];
-                leftover = listBarang[i][2];
-                profit = 0;
-            */
         }
         
         output.push({
@@ -79,4 +71,4 @@ function countProfit(shoppers) {
   //     shoppers: [],
   //     leftOver: 1,
   //     totalProfit: 0 } ]
-  //console.log(countProfit([])); //[]
+  console.log(countProfit([])); //[]
