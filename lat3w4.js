@@ -7,7 +7,7 @@ function cariMedian(arr) {
     if (arr.length % 2 !== 0){
       median = arr[middleOfArr]; 
     } else {
-      median = arr[middleOfArr - 1]; 
+      median = (arr[middleOfArr] + arr[middleOfArr - 1])/2; 
     }
     return median;
 }
